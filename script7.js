@@ -1,6 +1,18 @@
-// 陣列遍歷
-var books = ["書名1","書名2","書名3"]
+// 網頁元素
 
-for (var i=0; i<books.length; i++){
-    document.write(books[i] + "<br>");
-}
+// JavaScript BOM (Browser Object Model)
+// window 是一個全域物件，因此可以省略
+
+// window.screen.width
+
+// Document 負責處理 html 的標籤
+// Document (DOM)
+
+var s = document.getElementById("myheader")
+
+s.style.backgroundColor = "red"
+console.log(s.innerText)
+
+var nknush = document.getElementById("nknush")
+
+console.log(nknush.href)
