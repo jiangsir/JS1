@@ -1,14 +1,5 @@
 // 網頁元素
 
-books.push("書名4"); // 插入元素到尾部
-books.unshift("書名0"); // 插入元素到頭部
-books.pop(); // 刪除尾部元素
-books.shift(); // 刪除頭部元素
-
-for (var i=0; i<books.length; i++){
-    document.write(books[i] + "<br>");
-}
-
 // JavaScript BOM (Browser Object Model)
 // window 是一個全域物件，因此可以省略
 
