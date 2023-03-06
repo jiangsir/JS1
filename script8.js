@@ -34,3 +34,10 @@ document.addEventListener("keyup", function (e) {
     img.src = "cat1.png"
     console.log(e.code)
 });
+
+// function(event): event object
+let btn3 = document.getElementById("btn3");
+btn3.addEventListener("click", function (event) {
+    console.log(event.clientX, event.clientY);
+    console.log("觀察 event 有哪些可用的屬性:", event);
+});
