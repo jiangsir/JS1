@@ -36,7 +36,8 @@ getResolveMessage();
 async function getDatas(){
     let dataurl = "https://api.kcg.gov.tw/api/service/get/ddf31f47-e274-4a17-bd0d-ae2aee864922"
     let jsondatas = await (await fetch(dataurl)).json();
-    console.log(`typeof: ${typeof(jsondatas)}`);
+    console.log(`typeof jsondatas: ${typeof(jsondatas)}`);
+    console.log(`typeof jsondatas.data: ${typeof(jsondatas.data)}`);
     console.log(`jsondatas= ${jsondatas}`);  
     console.log(jsondatas["data"]);  // 取得 object 內的 key="data" 的資料
     console.log(jsondatas.data);  // 取得 object 內的 key="data" 的資料
