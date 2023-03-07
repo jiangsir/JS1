@@ -33,12 +33,13 @@ getResolveMessage();
 
 
 // 用 async await 實作 fetch 
-async function getDatas(){
+async function getDatas() {
     let dataurl = "https://api.kcg.gov.tw/api/service/get/ddf31f47-e274-4a17-bd0d-ae2aee864922"
     let jsondatas = await (await fetch(dataurl)).json();
-    console.log(`typeof jsondatas: ${typeof(jsondatas)}`);
-    console.log(`typeof jsondatas.data: ${typeof(jsondatas.data)}`);
-    console.log(`jsondatas= ${jsondatas}`);  
+
+    console.log(`typeof jsondatas: ${Array.isArray(jsondatas) ? "是 array" : "是 Object"}`);
+    console.log(`typeof jsondatas.data: ${Array.isArray(jsondatas.data) ? "是 array" : "是 Object"}`);
+    console.log(`jsondatas= ${jsondatas}`);
     console.log(jsondatas["data"]);  // 取得 object 內的 key="data" 的資料
     console.log(jsondatas.data);  // 取得 object 內的 key="data" 的資料
 }
