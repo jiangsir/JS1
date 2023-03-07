@@ -42,6 +42,11 @@ async function getDatas() {
     console.log(`jsondatas= ${jsondatas}`);
     console.log(jsondatas["data"]);  // 取得 object 內的 key="data" 的資料
     console.log(jsondatas.data);  // 取得 object 內的 key="data" 的資料
+
+    for (let key in jsondatas) { // 列出所有的 key
+        console.log("keys:", key, jsondatas[key]);
+    }
+
 }
 
 getDatas();
