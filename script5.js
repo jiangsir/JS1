@@ -11,12 +11,31 @@ function hello(name) {
 }
 document.write(hello("World") + "<br>")
 
-// 參數給定預設值
+// 函數預設值（default value）參數給定預設值 
 function hello(name = "World") {
     return `Hello, ${name}`;
 }
 document.write(hello() + "<br>")
 document.write(hello("Cookie") + "<br>")
+
+// 帶有預設值的參數放在後面。
+function add(x, y = 5) {
+    console.log(x + y);
+}
+add(2);   // 7
+add(2, 8); // 10
+
+// function 也是一個物件
+
+// callback function
+function funcA(callback) {
+    console.log("Hello ");
+    callback(); // 執行傳入的匿名函數
+}
+// 呼叫 funcA 傳入一個匿名函數
+funcA(function () {
+    console.log("Otani");
+});
 
 // this 關鍵字
 function whatIsThis() {
@@ -30,6 +49,12 @@ wit.witkey()  // object
 
 
 // 箭頭函數
+
+// 原始函數
+const arrow0 = function (param1, param2) {
+    return param1 ** param2;
+}
+
 // 基本用法
 const arrow1 = (param1, param2) => { param1 ** param2 }
 
