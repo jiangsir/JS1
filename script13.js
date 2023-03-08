@@ -47,6 +47,10 @@ async function getDatas() {
         console.log("keys:", key, jsondatas[key]);
     }
 
+    // 列出所有的 key
+    console.log("Object.keys(jsondatas): " + Object.keys(jsondatas));
+    // 列出所有的 key
+    console.log("Object.keys(jsondatas.data): " + Object.keys(jsondatas.data));
 }
 
 getDatas();
